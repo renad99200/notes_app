@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:tharwatsamynoteapp/views/notes_view.dart';
 void main(){
-  runApp(NotesApp());
+  runApp( const NotesApp());
 }
 
 class NotesApp extends StatelessWidget {
@@ -8,6 +10,9 @@ class NotesApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return MaterialApp(
+      theme: ThemeData(brightness: Brightness.dark),
+      home:const NotesView(),
+    );
   }
 }
